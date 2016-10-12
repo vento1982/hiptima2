@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :items do
     member do
-      patch :completed_at
+      patch :complete
+      put :uncomplete
     end
   end
 
